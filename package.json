@@ -1,0 +1,17 @@
+{
+  "name": "ray-tracing-demo",
+  "version": "1.0.0",
+  "description": "ray tracing demo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "server": "live-server test"
+  },
+  "author": "Yizheng Meng",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.1.0"
+  }
+}
