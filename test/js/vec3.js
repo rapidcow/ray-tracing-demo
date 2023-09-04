@@ -6,15 +6,15 @@ export class vec3 {
   }
 
   copy() {
-    return new vec3(this.x, this.y, this.z);
+    return new this(this.x, this.y, this.z);
   }
 
   plus(v) {
-    return new vec3(this.x + v.x, this.y + v.y, this.z + v.z);
+    return new this(this.x + v.x, this.y + v.y, this.z + v.z);
   }
 
   times(k) {
-    return new vec3(this.x * k, this.y * k, this.z * k);
+    return new this(this.x * k, this.y * k, this.z * k);
   }
 
   dot(v) {
@@ -26,7 +26,7 @@ export class vec3 {
   }
 
   unit() {
-    let N = 1 / this.norm();
-    return new vec3(this.x * N, this.y * N, this.z * N);
+    const N = 1 / this.norm();
+    return new this(this.x * N, this.y * N, this.z * N);
   }
 }
