@@ -34,15 +34,15 @@ export class mat3 {
   }
 
   T() {
-    return new mat3 ( this.at(1,1), this.at(2,1), this.at(3,1),
-                      this.at(1,2), this.at(2,2), this.at(3,2),
-                      this.at(1,3), this.at(2,3), this.at(3,3) );
+    return new mat3( this.at(1,1), this.at(2,1), this.at(3,1),
+                     this.at(1,2), this.at(2,2), this.at(3,2),
+                     this.at(1,3), this.at(2,3), this.at(3,3) );
   }
 
   dot(v) {
-    return new vec3 ( this.at(1,1) * v.x + this.at(1,2) * v.y + this.at(1,3) * v.z,
-                      this.at(2,1) * v.x + this.at(2,2) * v.y + this.at(2,3) * v.z,
-                      this.at(3,1) * v.x + this.at(3,2) * v.y + this.at(3,3) * v.z );
+    return new vec3( this.at(1,1) * v.x + this.at(1,2) * v.y + this.at(1,3) * v.z,
+                     this.at(2,1) * v.x + this.at(2,2) * v.y + this.at(2,3) * v.z,
+                     this.at(3,1) * v.x + this.at(3,2) * v.y + this.at(3,3) * v.z );
   }
 
   mul(m) {
@@ -53,24 +53,24 @@ export class mat3 {
   static rotx(theta) {
     const c = theta.cos();
     const s = theta.sin();
-    return new mat3 ( 1,  0,  0,
-                      0,  c, -s,
-                      0,  s,  c );
+    return new mat3( 1,  0,  0,
+                     0,  c, -s,
+                     0,  s,  c );
   }
 
   static roty(theta) {
     const c = theta.cos();
     const s = theta.sin();
-    return new mat3 ( c,  0,  s,
-                      0,  1,  0,
-                     -s,  0,  c );
+    return new mat3( c,  0,  s,
+                     0,  1,  0,
+                    -s,  0,  c );
   }
 
   static rotz(theta) {
     const c = theta.cos();
     const s = theta.sin();
-    return new mat3 ( c, -s,  0,
-                      s,  c,  0,
-                      0,  0,  1 );
+    return new mat3( c, -s,  0,
+                     s,  c,  0,
+                     0,  0,  1 );
   }
 }
